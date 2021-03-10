@@ -34,7 +34,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: yarn ci
+      
+      - run: |
+          cd my-app
+          yarn ci
       - run: yarn publish:beachball
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -48,7 +51,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: yarn ci
+      - run: 
+          cd my-app
+          yarn ci
       - run: yarn publish:beachball
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

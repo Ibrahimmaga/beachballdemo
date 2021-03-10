@@ -37,7 +37,7 @@ jobs:
       
       - run: |
           cd my-app
-          yarn ci
+          yarn 
       - run: yarn publish:beachball
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -53,7 +53,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: 
           cd my-app
-          yarn ci
+          yarn 
       - run: yarn publish:beachball
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

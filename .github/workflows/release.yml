@@ -39,7 +39,7 @@ jobs:
           cd my-app
           yarn 
           npm i beachball
-          yarn publish:beachball
+          yarn beachball:publish
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -54,8 +54,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: |
           cd my-app
-          npm i beachball
           yarn 
-          yarn publish:beachball
+          npm i beachball
+          yarn beachball:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

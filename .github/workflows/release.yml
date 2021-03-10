@@ -42,6 +42,7 @@ jobs:
           yarn beachball:publish
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   publish-gpr:
     needs: build
@@ -59,3 +60,4 @@ jobs:
           yarn beachball:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

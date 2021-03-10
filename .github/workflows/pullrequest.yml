@@ -25,5 +25,5 @@ jobs:
         cd my-app
         yarn 
         yarn build
-        yarn test
+        yarn test 
     

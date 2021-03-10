@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "change": "beachball change",
     "check": "beachball check",
-    "beachball:publish": "beachball publish -y -n $NPM_TOKEN"
+    "beachball:publish": "beachball publish -y -n ${{secrets.NPM.TOKEN}} --access public"
   },
   "eslintConfig": {
     "extends": [

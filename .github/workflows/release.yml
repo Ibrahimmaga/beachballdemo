@@ -40,6 +40,8 @@ jobs:
           yarn 
           npm i beachball
           yarn beachball:publish
+        with:
+          args: '--dir=dist'
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -58,6 +60,8 @@ jobs:
           yarn 
           npm i beachball
           yarn beachball:publish
+        with:
+          args: '--dir=dist'
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

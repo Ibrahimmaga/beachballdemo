@@ -4,8 +4,9 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
+  push:
+    branches: [master]
 
 jobs:
   build:
@@ -15,8 +16,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm test
+      - run: |
+          cd my-app
+          yarn 
+          yarn build
+          yarn test
+      - run: |
+          git config user.email "imaga75@hotmail.com"  
+          git config user.name "Ibrahim Maga"
 
   publish-npm:
     needs: build
@@ -27,10 +34,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+      - run: yarn ci
+      - run: yarn publish:beachball
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
     needs: build
@@ -41,7 +48,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+      - run: yarn ci
+      - run: yarn publish:beachball
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

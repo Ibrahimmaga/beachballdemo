@@ -1,5 +1,6 @@
+
+require('/path/to/package.json');
 module.exports = {
 
-   disallowedChangeTypes: ['major'] ,
-};
-require('/path/to/package.json');
+    disallowedChangeTypes: ['major'] ,
+ };

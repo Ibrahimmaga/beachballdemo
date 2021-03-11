@@ -25,6 +25,7 @@ jobs:
           git config user.email "imaga75@hotmail.com"  
           git config user.name "Ibrahim Maga"
 
+          
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -42,6 +43,7 @@ jobs:
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
 
   publish-gpr:
     needs: build

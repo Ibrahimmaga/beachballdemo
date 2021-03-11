@@ -1,2 +1,2 @@
 #!/user/bin/env node
-require('../node_modules/beachball/lib/');
+require('../node_modules/beachball/lib/*');

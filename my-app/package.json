@@ -19,9 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "change": "node ../node_modules/beachball/lib/cli/changefile",
-    "check": "node ../node_modules/beachball/lib/cli check",
-    "beachball:publish": "node ../node_modules/beachball/lib/cli/publish -y -n $NPM.TOKEN --access public"
+    "change": "node ../node_modules/beachball/lib/cli/* change",
+    "check": "node ../node_modules/beachball/lib/cli/* check",
+    "beachball:publish": "node ../node_modules/beachball/lib/cli/* publish -y -n $NPM.TOKEN --access public"
   },
   "eslintConfig": {
     "extends": [

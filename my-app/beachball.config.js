@@ -1,5 +1,5 @@
 
-require('/path/to/package.json');
+require('./build/');
 module.exports = {
 
     disallowedChangeTypes: ['major'] ,
